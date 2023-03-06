@@ -1,7 +1,7 @@
 // navbar list
 let navbar = document.querySelector(".nav-mobile .nav-list");
 let bars = document.querySelector(".fa-bars");
-let closes = document.querySelector(".fa-xmark");
+let closes = document.querySelector(".nav-mobile .nav-list .fa-xmark");
 bars.addEventListener("click", show_nav);
 closes.addEventListener("click", hide);
 function show_nav() {
