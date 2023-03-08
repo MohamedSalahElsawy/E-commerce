@@ -72,11 +72,11 @@ body {
   transform: translate(-50%, -50%);
   /* margin: auto; */
 }
-.pop .pop_window .info p{
+.pop .pop_window .info p {
   margin: 10px 0;
   color: var(--davys-gray);
 }
-.pop .pop_window .info i{
+.pop .pop_window .info i {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -84,7 +84,7 @@ body {
   color: var(--salmon-pink);
   cursor: pointer;
 }
-.pop .pop_window .info input{
+.pop .pop_window .info input {
   display: block;
   padding: 10px;
   width: 100%;
@@ -94,7 +94,7 @@ body {
   border: 1px solid #ccc;
   border-radius: 6px;
 }
-.pop .pop_window .info button{
+.pop .pop_window .info button {
   padding: 15px 20px;
   font-weight: bolder;
   background-color: var(--eerie-black);
@@ -104,35 +104,35 @@ body {
   outline: none;
 }
 /* pop window */
-.notification-toast{
+.notification-toast {
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 20px;
   display: inline-block;
   border-radius: 10px;
-  position:fixed;
+  position: fixed;
   bottom: 30px;
   left: -100%;
   z-index: 6;
   transition: 0.2s;
 }
-.notification-toast .toast-banner{
+.notification-toast .toast-banner {
   width: 30%;
 }
-.notification-toast .toast-banner img{
+.notification-toast .toast-banner img {
   width: 100%;
 }
-.notification-toast .toast-detail i{
+.notification-toast .toast-detail i {
   position: absolute;
   top: 15px;
   right: 15px;
   font-size: 16px;
   cursor: pointer;
 }
-.notification-toast .toast-detail{
+.notification-toast .toast-detail {
   color: var(--davys-gray);
 }
-.notification-toast .toast-detail .toast-title{
+.notification-toast .toast-detail .toast-title {
   color: var(--eerie-black);
   font-size: 16px;
   font-weight: bolder;
@@ -521,10 +521,10 @@ body {
   border-radius: 10px;
 }
 .hero .info {
-  width: 350px;
+  width: 450px;
   position: absolute;
-  height: max-content;
-  bottom: 50px;
+  min-height: max-content;
+  bottom: 40px;
 }
 .hero .slider-1 h2 {
   font-size: 35px;
@@ -757,6 +757,35 @@ body {
 }
 .clothing_poducts .pro1 .text_clothes .price span {
   text-decoration: line-through;
+}
+.sec_products .tooles .follow {
+  background-color: red !important;
+}
+.showimages {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000071;
+  z-index: 6;
+  transition: 0.3s;
+  transform: scale(0);
+}
+.showimages img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+}
+.showimages i {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  color: var(--salmon-pink);
+  cursor: pointer;
 }
 /* start of Deals of Day */
 .deal .deal_of_day {
@@ -1157,7 +1186,7 @@ footer .card p {
 /* media */
 @media (max-width: 1023px) {
   /* pop */
-  .notification-toast{
+  .notification-toast {
     bottom: 80px;
   }
   .hero {
@@ -1171,23 +1200,26 @@ footer .card p {
   .nav-mobile .icon {
     display: flex;
   }
+  .hero .info{
+    width: max-content;
+  }
   .hero .slider-1 {
     padding: 40px;
   }
   .hero .slider-1 h2 {
-    font-size: 30px;
+    font-size: 20px;
     color: var(--salmon-pink);
   }
   .hero .slider-1 h1 {
-    font-size: 35px;
-    margin: 15px 0;
+    font-size: 25px;
+    margin: 10px 0;
   }
   .hero .slider-1 h3 {
     font-size: 20px;
     color: var(--sonic-silver);
   }
   .hero .slider-1 h3 span {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bolder;
   }
   /* start of num of clothes */
@@ -1221,6 +1253,9 @@ footer .card p {
   }
   .arrivals {
     width: 100%;
+  }
+  .showimages img {
+    width: 600px;
   }
   /* start of New Products */
   .new_Products .new {
@@ -1284,12 +1319,12 @@ footer .card p {
 }
 @media (max-width: 767px) {
   /* pop */
-  .pop_window img{
+  .pop_window img {
     display: none;
   }
-  .pop .pop_window{
+  .pop .pop_window {
     width: 70%;
-    height:fit-content ;
+    height: fit-content;
   }
   .hero {
     width: 90% !important;
@@ -1307,6 +1342,9 @@ footer .card p {
   /* start of sec_products */
   .sec_products {
     width: 90% !important;
+  }
+  .showimages img {
+    width: 400px;
   }
   /* start of Deals of Day */
   .deal1 {
@@ -1342,9 +1380,9 @@ footer .card p {
 }
 @media (max-width: 570px) {
   /* pop */
-    .pop .pop_window{
-    width:90%;
-    height:fit-content ;
+  .pop .pop_window {
+    width: 90%;
+    height: fit-content;
   }
   .nav-mobile .icon {
     width: 100%;
@@ -1387,6 +1425,9 @@ footer .card p {
   /* start of sec_products */
   .products_arrivals {
     grid-template-columns: 100%;
+  }
+  .showimages img {
+    width: 300px;
   }
   /* start of shopping */
   .sec_shopping .shopping {

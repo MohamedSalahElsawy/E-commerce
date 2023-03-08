@@ -68,12 +68,7 @@ category_pro.forEach((e) => {
       e.parentElement.style.maxHeight = null;
       e.lastElementChild.lastElementChild.className = "fa-solid fa-plus";
     } else {
-      for (let i = 0; i < category.length; i++) {
-        if ((category[i].style.maxHeight = "130px")) {
-          category[i].style.maxHeight = null;
-        }
-      }
-      e.parentElement.style.maxHeight = "130px";
+      e.parentElement.style.maxHeight = "160px";
       e.lastElementChild.lastElementChild.className = "fa-solid fa-minus";
     }
   });
@@ -133,13 +128,32 @@ let advertisement_close = document.querySelector(
 );
 let show_advertisement = setInterval(() => {
   advertisement.style.left = "20px";
-  
 }, 3000);
 setInterval(() => {
   advertisement.style.left = "-100%";
 }, 8000);
-advertisement_close.addEventListener("click",function () {
+advertisement_close.addEventListener("click", function () {
   clearInterval(show_advertisement);
   advertisement.style.left = "-100%";
-})
-
+});
+//
+let icon_eyes = document.querySelectorAll(".new .tooles .fa-eye");
+let close_img = document.querySelector(".showimages i");
+let show_img = document.querySelector(".showimages img");
+let div_show_img = document.querySelector(".showimages");
+let follow = document.querySelectorAll(".fa-heart");
+icon_eyes.forEach((e) => {
+  e.addEventListener("click", function () {
+    let showimages = this.parentElement.parentElement.children[0].children[0];
+    show_img.src = showimages.src;
+    div_show_img.style.transform = "scale(1)";
+  });
+});
+close_img.onclick = function () {
+  div_show_img.style.transform = "scale(0)";
+};
+follow.forEach((f) => {
+  f.addEventListener("click", function () {
+    this.classList.toggle("follow")
+  })
+});
